@@ -1,3 +1,1 @@
-TC 2017.1
-
-Alunos: Oliveiros Neto, Gustavo Tejo
+Implementation of a Turing Machine Simulator using Java.
