@@ -31,7 +31,7 @@ public class Main {
 	
 	public static void init() throws IOException {
 		System.out.println("Bem vindo ao Simulador de Maquina de Turing.");
-		turingMachine.readFromConsole();
+		turingMachine.readFile();
 		System.out.println("");
 		System.out.print("Digite a palavra: ");
 		turingMachine.escreverPalavra(scan.nextLine());

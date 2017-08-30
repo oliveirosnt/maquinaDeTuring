@@ -11,26 +11,16 @@ public class Fita {
 		this.cabecote = 0;
 	}
 
-	public void escreverPalavra(String palavra) {
-		String[] saida = palavra.split("");
-		for (int i = 0; i < saida.length; i++) {
-			if(saida[i].equals(" ")) this.palavra.add("_");
-			else
-				this.palavra.add(saida[i]);
-		}
-		this.cabecote = 0;
-	}
-	
-	public void escreverSimbolo(String simbolo){
-		palavra.set(cabecote, simbolo);
-	}
-	
 	public void andar(String andar) {
 		if(andar.equals("l")) {
 			this.andarParaEsquerda();
 		} else if (andar.equals("r")) {
 			this.andarParaDireita();
 		}
+	}
+	
+	public void escreverSimbolo(String simbolo){
+		palavra.set(cabecote, simbolo);
 	}
 	
 	public void andarParaEsquerda(){
@@ -40,6 +30,7 @@ public class Fita {
 		}
 		cabecote--;
 	}
+	
 	public void andarParaDireita(){
 		if (cabecote == this.palavra.size() - 1) {
 			this.palavra.add("_");
@@ -54,4 +45,15 @@ public class Fita {
 	public String getSimboloAtual() {
 		return palavra.get(cabecote);
 	}
+	
+	public void escreverPalavra(String palavra) {
+		String[] saida = palavra.split("");
+		for (int i = 0; i < saida.length; i++) {
+			if(saida[i].equals(" ")) this.palavra.add("_");
+			else
+				this.palavra.add(saida[i]);
+		}
+		this.cabecote = 0;
+	}
+	
 }
